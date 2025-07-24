@@ -31,11 +31,11 @@ Based on the recommendations and the existing Terraform script, here's the updat
 # -  }
 
 # + Add the organizationViewer role for pkhushalani@google.com
-+  resource "google_organization_iam_member" "organization_viewer_pkhushalani" {
-+    org_id = "274706244275"
-+    role   = "roles/resourcemanager.organizationViewer"
-+    member = "user:pkhushalani@google.com"
-+  }
+  resource "google_organization_iam_member" "organization_viewer_pkhushalani" {
+    org_id = "274706244275"
+    role   = "roles/resourcemanager.organizationViewer"
+    member = "user:pkhushalani@google.com"
+  }
 
 # +  Recommendation: REPLACE_ROLE roles/chronicle.admin with organizations/274706244275/roles/latchkey_hierarchy_traversal for pkhushalani@google.com
    resource "google_organization_iam_binding" "chronicle_api_admin" {
