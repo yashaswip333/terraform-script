@@ -42,20 +42,6 @@ resource "google_organization_iam_custom_role" "custom_role_2" {
 # resource "google_organization_iam_custom_role" "custom_role_1"
 # resource "google_organization_iam_custom_role" "custom_role_2"
 
-terraform {
-  required_providers {
-    google = {
-      source  = "hashicorp/google"
-      version = "4.68.0"
-    }
-  }
-}
-
-provider "google" {
-  project = "gcp-project-id" # Replace with your project ID
-  region  = "us-central1"
-}
-
 # Removing roles/chronicle.admin for pkhushalani@google.com from google_organization_iam_binding "chronicle_api_admin"
 resource "google_organization_iam_binding" "chronicle_api_admin" {
   org_id = "274706244275"
